@@ -14,3 +14,12 @@ async function Showdata(){
 }
 
 Showdata()
+
+
+
+
+async function userDetails() {
+  let user = await new Promise(res => setTimeout(() => res("User: Rahul"), 1000));
+  console.log(user);
+}
+userDetails();
