@@ -1,27 +1,59 @@
 
 
-const  MyPromise= new Promise((resolve, reject)=>{
+// const  MyPromise= new Promise((resolve, reject)=>{
 
-    let success = false;
+//     let success = true;
   
-    if(success){
-        resolve("Data gateteddd");
-    }
-    else{
-        reject("This is rejeted")
-    }
+//     if(success){
+//         resolve("Data gateteddd");
+//     }
+//     else{
+//         reject("This is rejeted")
+//     }
+// })
+
+// MyPromise
+// .then(function(result){
+//     console.log(result)
+// })
+// .catch(function(error){
+//     console.log(error)
+// })
+
+
+// const MyPage = async()=>{
+//     const ans = await MyPromise;
+//     console.log(ans);
+// }
+
+// MyPage()
+
+const MyPromise = new Promise(function(resolve,reject){
+  let success  =true;
+  if(success){
+    resolve("Promise is done")
+  }
+  else{
+    reject("Promise is rejected")
+  }
 })
 
 MyPromise
-.then(function(result){
-    console.log(result)
+.then((result)=>{
+  console.log("Promise true", result)
 })
-.catch(function(error){
-    console.log(error)
+.catch((error)=>{
+    console.log("Error", error)
 })
 
 
-const MyPage = async()=>{
+
+async function Show(){
     const ans = await MyPromise;
-    console.log(ans);
+    console.log("async await", ans);
 }
+
+Show();
+
+
+
