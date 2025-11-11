@@ -57,6 +57,13 @@ app.put("/studentupdate/:id", (req, res) => {
     });
 });
 
+app.get("/user", (req,res)=>{
+    const name=req.query.name;
+    const age = req.query.age;
+    res.send(`Name:${name},Age:${age}`)
+    console.log("okkk")
+})
+
 
 
 app.listen(8000, ()=>{
